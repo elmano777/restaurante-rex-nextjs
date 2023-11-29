@@ -3,12 +3,15 @@ import { AiFillPhone } from "react-icons/ai";
 import { AiFillClockCircle } from "react-icons/ai";
 import { BiSolidDirectionLeft } from "react-icons/bi";
 import Image from 'next/image'
+import { HeaderFunction } from "@/components/header"
+import { FooterFunction } from "@/components/footer"
 
 export default function Home() {
   return (
     <>
-      <div className="relative w-screen h-72 md:h-96">
-        <Image src="/Images/lugar-transformed.jpg" alt="Place" layout="fill" objectFit="cover" />
+      <HeaderFunction />
+      <div className="relative w-full h-72 md:h-96">
+        <Image src="/Images/lugar-transformed.jpg" alt="Place" layout="fill"/>
       </div>
       <div
         className="flex flex-col items-center justify-center w-full bg-red-700 h-28 
@@ -101,6 +104,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <FooterFunction/>
     </>
   )
 }
