@@ -2,9 +2,11 @@
 
 import { useForm } from "react-hook-form"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function RegistroFunction() {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const router = useRouter();
     const onSubmit = handleSubmit(async (data) => {
         if (data.password !== data.confirmPassword) {
             return alert("oe cojudo tu contra no es la misma")
@@ -20,10 +22,11 @@ export default function RegistroFunction() {
                 "Content-Type": "application/json"
             }
         })
-        const resJSON = await res.json();
-        console.log(resJSON)
+        if (res.ok) {
+            router.push("/auth/login")
+        }
+        console.log(res)
     })
-    console.log(errors)
     return (
         <div className="bg-blue-600 h-screen w-screen flex items-center justify-center">
             <form action="" onSubmit={onSubmit} className="h-auto w-auto flex justify-center items-center flex-col gap-6 bg-white px-24">
