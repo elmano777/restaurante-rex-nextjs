@@ -1,3 +1,5 @@
+"use client";
+
 import { BiSolidFoodMenu } from "react-icons/bi";
 import { AiFillPhone } from "react-icons/ai";
 import { AiFillClockCircle } from "react-icons/ai";
@@ -5,11 +7,21 @@ import { BiSolidDirectionLeft } from "react-icons/bi";
 import Image from 'next/image'
 import { HeaderFunction } from "@/components/header"
 import { FooterFunction } from "@/components/footer"
+import { useState } from 'react'
 
 export default function Home() {
+  const [allProducts, setAllProducts] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [countProducts, setCountProducts] = useState(0);
   return (
     <>
-      <HeaderFunction />
+      <HeaderFunction
+        allProducts={allProducts}
+        setAllProducts={setAllProducts}
+        total={total}
+        setTotal={setTotal}
+        countProducts={countProducts}
+        setCountProducts={setCountProducts} />
       <div className="relative w-full h-72 md:h-96">
         <Image src="/Images/lugar-transformed.jpg" alt="Place" layout="fill"/>
       </div>

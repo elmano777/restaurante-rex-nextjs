@@ -1,12 +1,24 @@
+"use client";
+
 import { HeaderFunction } from "@/components/header";
 import { CartaCardFunction } from '@/components/pagefunction'
 import { FooterFunction } from "@/components/footer"
 import { TituloFunction } from "@/components/titulo"
+import { useState } from 'react'
 
 export default function CartaPage() {
+    const [allProducts, setAllProducts] = useState([]);
+    const [total, setTotal] = useState(0);
+    const [countProducts, setCountProducts] = useState(0);
     return (
         <>
-            <HeaderFunction />
+            <HeaderFunction
+                allProducts={allProducts}
+                setAllProducts={setAllProducts}
+                total={total}
+                setTotal={setTotal}
+                countProducts={countProducts}
+                setCountProducts={setCountProducts} />
             <TituloFunction titulo2={"Carta"} />
             <div className="grid grid-cols-3">
                 <CartaCardFunction imagen="/Images/CartaLogos/CartaLogo1.jpg" descripcion={"Entradas"} ruta="Promociones/entradas" />
@@ -15,7 +27,7 @@ export default function CartaPage() {
                 <CartaCardFunction imagen="/Images/CartaLogos/CartaLogo4.jpg" descripcion={"Tiraditos"} ruta="Promociones/tiraditos" />
                 <CartaCardFunction imagen="/Images/CartaLogos/CartaLogo5.jpg" descripcion={"Arroces"} ruta="Promociones/arroces" />
                 <CartaCardFunction imagen="/Images/CartaLogos/CartaLogo6.jpg" descripcion=
-                {"Tacu tacus"} ruta="Promociones/tacutacus" />
+                    {"Tacu tacus"} ruta="Promociones/tacutacus" />
                 <CartaCardFunction imagen="/Images/CartaLogos/CartaLogo7.jpg" descripcion={"Aguadito"} ruta="Promociones/aguadito" />
                 <CartaCardFunction imagen="/Images/CartaLogos/CartaLogo8.jpg" descripcion={"Jaleas"} ruta="Promociones/jaleas" />
                 <CartaCardFunction imagen="/Images/CartaLogos/CartaLogo10.jpg" descripcion={"Pescado Frito"} ruta="Promociones/pescadofrito" />

@@ -1,6 +1,30 @@
 import { data } from '@/datos';
 
-export const PlatosFunction = ({ productIds, }) => {
+export const PlatosFunction = ({
+    allProducts,
+    setAllProducts,
+    countProducts,
+    setCountProducts,
+    total,
+    setTotal,
+    productIds, }) => {
+    const onAddProduct = product => {
+        if (allProducts.find(item => item.id === product.id)) {
+            const products = allProducts.map(item =>
+                item.id === product.id
+                    ? { ...item, cantidad: item.cantidad + 1 }
+                    : item
+            );
+            setTotal(total + product.costo * product.cantidad);
+            setCountProducts(countProducts + product.cantidad);
+            setCart(currentCart => [...currentCart, product]);
+            return setAllProducts([...products]);
+        }
+
+        setTotal(total + product.costo * product.cantidad);
+        setCountProducts(countProducts + product.cantidad);
+        setAllProducts([...allProducts, product]);
+    };
     const filteredData = data.filter(product => productIds.includes(product.id));
     return (
         <div className='grid grid-cols-3 gap-2 h-auto w-full p-2'>
