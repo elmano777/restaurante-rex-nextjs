@@ -31,9 +31,9 @@ export function HeaderFunction({
     };
     return (
         <div className="flex flex-col bg-white text-black w-full h-auto md:flex-row">
-            <div className="hidden md:flex md:w-1/4 md:h-auto md:justify-center md:items-center">
+            <Link href="/" className="hidden md:flex md:w-1/4 md:h-auto md:justify-center md:items-center">
                 <Image src="/Images/rex-removebg-preview.png" alt="Place" width={160} height={160} />
-            </div>
+            </Link>
             <nav className="grid grid-cols-2 h-auto justify-center items-center w-full gap-5 p-10 md:flex md:flex-row md:w-1/2">
                 <Link href="/" className={"bg-black p-3 rounded-lg text-white hover:text-green-500"}>Inicio</Link>
                 <Link href="/GiftCards" className="bg-black p-3 rounded-lg text-white hover:text-green-500">GiftCards</Link>

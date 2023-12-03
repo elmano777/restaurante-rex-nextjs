@@ -12,12 +12,17 @@ export default function RifaPage() {
     const [numero, setNumero] = useState(null);
     const [mensaje, setMensaje] = useState('');
     useEffect(() => {
-        const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
-        setNumero(numeroAleatorio);
-        if (numeroAleatorio % 2 === 0) {
-            setMensaje('¡Ganador!');
+        const rifa = localStorage.getItem('rifa');
+        if (rifa) {
+            const { numero, mensaje } = JSON.parse(rifa);
+            setNumero(numero);
+            setMensaje(mensaje);
         } else {
-            setMensaje('Lo siento');
+            const numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+            const mensaje = numeroAleatorio % 2 === 0 ? '¡Ganador!' : 'Lo siento';
+            setNumero(numeroAleatorio);
+            setMensaje(mensaje);
+            localStorage.setItem('rifa', JSON.stringify({ numero: numeroAleatorio, mensaje }));
         }
     }, []);
     return (

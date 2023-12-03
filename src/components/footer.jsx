@@ -9,6 +9,7 @@ import { FaCcMastercard } from "react-icons/fa";
 import { SiAmericanexpress } from "react-icons/si";
 import { FaCcDiscover } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 export function FooterFunction() {
     return (
@@ -21,19 +22,24 @@ export function FooterFunction() {
                     </div>
                     <div className="flex flex-grow items-center gap-2">
                         <ImParagraphLeft />
-                        <p>Brigadier Pumacahua 2321</p>
+                        <a href="https://www.google.com/maps/place/Jr.+Brigadier+Pumacahua+2321,+Lince+15073/@-12.0852695,-77.0459074,16.75z/data=!4m6!3m5!1s0x9105c8f7c6ae85b5:0xfd67280892345f00!8m2!3d-12.0850075!4d-77.0431089!16s%2Fg%2F11f12rm6mz?entry=ttu" target="_blank"
+                            className="hover:text-yellow-400">
+                            <p>Brigadier Pumacahua 2321</p>
+                        </a>
                     </div>
                     <div className="flex flex-grow items-center gap-2">
                         <ImParagraphLeft />
-                        <p>Brigadier Pumacahua 2318</p>
+                        <a href="https://www.google.com/maps/place/Jr.+Brigadier+Pumacahua+2318,+Lince+15073/@-12.0850052,-77.0458666,17z/data=!3m1!4b1!4m6!3m5!1s0x9105c8f7c17a0c4d:0xbfa6d5e3afee1eef!8m2!3d-12.0850052!4d-77.0432863!16s%2Fg%2F11dzw7g4s4?entry=ttu" target="_blank"
+                            className="hover:text-yellow-400">
+                            <p>Brigadier Pumacahua 2318</p>
+                        </a>
                     </div>
                     <div className="flex flex-grow items-center gap-2">
                         <ImParagraphLeft />
-                        <p>Ignacio Merino 2331</p>
-                    </div>
-                    <div className="flex flex-grow items-center gap-2">
-                        <ImParagraphLeft />
-                        <p>Lince, Lima - altura de Canevaro cuadra 9</p>
+                        <a href="https://www.google.com/maps/place/Av.+Ignacio+Merino+2331,+Lince+15046/@-12.0869881,-77.0345678,17z/data=!3m1!4b1!4m6!3m5!1s0x9105c8606aafceab:0xfd6329f60a747ede!8m2!3d-12.0869881!4d-77.0319875!16s%2Fg%2F11c5bkb5hd?entry=ttu" target="_blank"
+                            className="hover:text-yellow-400">
+                            <p>Ignacio Merino 2331</p>
+                        </a>
                     </div>
                 </div>
                 <div className="flex flex-col w-1/4 h-20 m-12">
@@ -57,21 +63,21 @@ export function FooterFunction() {
                     </div>
                     <div className="flex flex-grow items-center gap-2">
                         <ImParagraphLeft />
-                        <p>reservaciones@cevicheriarichards.com</p>
+                        <a href="mailto:contacto@cevicheriarex.com">contacto@cevicheriarex.com</a>
                     </div>
-                    <div className="flex flex-grow items-center gap-2">
+                    <Link href="/Politicas" className="flex flex-grow items-center gap-2">
                         <ImParagraphLeft />
                         <p>Política de privacidad</p>
-                    </div>
+                    </Link>
                     <div className="flex flex-grow items-center gap-2">
                         <ImParagraphLeft />
-                        <p>Libro de Reclamaciones</p>
+                        <a href="mailto:reclamos@cevicheriarex.com">reclamos@cevicheriarex.com</a>
                     </div>
                 </div>
                 <address className="flex flex-col w-1/4 h-auto m-12">
                     <div className="bg-white h-auto w-auto my-4 rounded-full">
-                        <Image src="/Images/rex-removebg-preview.png" alt="logo" 
-                        width={300} height={300} />
+                        <Image src="/Images/rex-removebg-preview.png" alt="logo"
+                            width={300} height={300} />
                     </div>
                     <div className="flex flex-row h-auto">
                         <FaCcVisa className="w-1/4 h-8" />
@@ -83,12 +89,16 @@ export function FooterFunction() {
             </div>
             <div className="flex flex-col items-center justify-center w-full h-auto gap-4">
                 <div className="flex flex-row">
-                    <AiFillFacebook className="w-12 h-12" />
-                    <AiOutlineMail className="w-12 h-12" />
+                    <a href="https://www.facebook.com/cevicheriamariapastor/">
+                        <AiFillFacebook className="w-12 h-12" />
+                    </a>
+                    <a href="mailto:contacto@cevicheriarex.com">
+                        <AiOutlineMail className="w-12 h-12" />
+                    </a>
                 </div>
                 <p className="flex flex-row items-center gap-2">
                     <AiFillCopyrightCircle />
-                    Richards | Desarrollado por Enfocus Soluciones
+                    Rex | Desarrollado por UTP Soluciones
                 </p>
             </div>
         </footer>

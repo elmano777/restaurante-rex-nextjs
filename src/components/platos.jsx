@@ -17,7 +17,6 @@ export const PlatosFunction = ({
             );
             setTotal(total + product.costo * product.cantidad);
             setCountProducts(countProducts + product.cantidad);
-            setCart(currentCart => [...currentCart, product]);
             return setAllProducts([...products]);
         }
 
