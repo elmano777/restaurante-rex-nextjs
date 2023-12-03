@@ -4,6 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import Link from "next/link";
+import Image from "next/image";
 
 function LoginPage() {
     const {
@@ -25,26 +26,24 @@ function LoginPage() {
 
         console.log(res)
         if (res.error) {
-            setError(res.error)
+            setError(<p>credenciales no existentes</p>)
         } else {
-            router.push('/')
+            router.push('/rifa')
             router.refresh()
         }
     });
 
     return (
-        <div className="h-[calc(100vh-7rem)] flex flex-col justify-center items-center">
-            <form onSubmit={onSubmit} className="w-1/4">
-
+        <div className="bg-blue-600 h-screen w-screen flex items-center justify-center">
+            <form onSubmit={onSubmit} className="h-auto w-auto flex justify-center items-center flex-col gap-6 bg-white px-24">
+                <div className="flex relative w-48 h-48 items-center justify-center -mb-11">
+                    <Image src="/Images/rex-removebg-preview.png" alt="logo" layout="fill" className=""></Image>
+                </div>
                 {error && (
                     <p className="bg-blue-500 text-lg text-white p-3 rounded mb-2">{error}</p>
                 )}
 
-                <h1 className="text-slate-200 font-bold text-4xl mb-4">Login</h1>
-
-                <label htmlFor="email" className="text-slate-500 mb-2 block text-sm">
-                    Email:
-                </label>
+                <h1 className="text-slate-200 font-bold text-4xl mb-4">Login de la Rifa</h1>
                 <input
                     type="email"
                     {...register("email", {
@@ -60,10 +59,6 @@ function LoginPage() {
                 {errors.email && (
                     <span className="text-red-500 text-xs">{errors.email.message}</span>
                 )}
-
-                <label htmlFor="password" className="text-slate-500 mb-2 block text-sm">
-                    Password:
-                </label>
                 <input
                     type="password"
                     {...register("password", {
@@ -84,10 +79,10 @@ function LoginPage() {
                 <button className="w-full bg-blue-500 text-white p-3 rounded-lg mt-2">
                     Login
                 </button>
-            </form>
-            <Link href="/auth/register" className="w-80 text-center bg-red-500 text-white p-3 rounded-lg my-4">
+                <Link href="/auth/register" className="w-80 text-center bg-red-500 text-white p-3 rounded-lg my-4">
                 No tienes cuenta? Create una
             </Link>
+            </form>
         </div>
     );
 }

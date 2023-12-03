@@ -9,7 +9,7 @@ export default function RegistroFunction() {
     const router = useRouter();
     const onSubmit = handleSubmit(async (data) => {
         if (data.password !== data.confirmPassword) {
-            return alert("oe cojudo tu contra no es la misma")
+            return alert("Contraseñas no coinciden")
         }
         const res = await fetch("/api/auth/register", {
             method: "POST",
@@ -33,7 +33,8 @@ export default function RegistroFunction() {
                 <div className="flex relative w-48 h-48 items-center justify-center -mb-11">
                     <Image src="/Images/rex-removebg-preview.png" alt="logo" layout="fill" className=""></Image>
                 </div>
-                <h1 className="text-3xl font-mono">Registrarse</h1>
+                <h1 className="text-3xl font-mono">Rifa</h1>
+                <p className="text-xl font-mono">OJO!: Recuerde su email y contraseña es lo importante</p>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-12">
                     <div>
                         <input className="p-3 rounded block bg-slate-900 text-slate-300 w-52" type="text" {...register("username", { required: { value: true, message: "usuario requerido", } })} placeholder="Ingrese su Usuario" />

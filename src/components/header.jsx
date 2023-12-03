@@ -97,7 +97,7 @@ export function HeaderFunction({
                 </div>
                 <Link href="/auth/login" className="bg-blue-500 p-4 rounded-lg flex flex-row gap-2 items-center justify-center">
                     <BiLogIn />
-                    Usuario
+                    Rifa
                 </Link>
             </div>
         </div>

@@ -23,7 +23,7 @@ export default function Home() {
         countProducts={countProducts}
         setCountProducts={setCountProducts} />
       <div className="relative w-full h-72 md:h-96">
-        <Image src="/Images/lugar-transformed.jpg" alt="Place" layout="fill"/>
+        <Image src="/Images/lugar-transformed.jpg" alt="Place" layout="fill" />
       </div>
       <div
         className="flex flex-col items-center justify-center w-full bg-red-700 h-28 
@@ -116,7 +116,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <FooterFunction/>
+      <div class="flex flex-col md:flex-row justify-center items-center w-full h-auto gap-12 my-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.396181776017!2d-77.04568919021683!3d-12.0850074881054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f7c6ae85b5%3A0xfd67280892345f00!2sJr.%20Brigadier%20Pumacahua%202321%2C%20Lince%2015073!5e0!3m2!1ses-419!2spe!4v1701586916731!5m2!1ses-419!2spe" width="350" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3962153078737!2d-77.04586659021692!3d-12.085005188105365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8f7c17a0c4d%3A0xbfa6d5e3afee1eef!2sJr.%20Brigadier%20Pumacahua%202318%2C%20Lince%2015073!5e0!3m2!1ses-419!2spe!4v1701587151505!5m2!1ses-419!2spe" width="350" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.367304140492!2d-77.03456779021684!3d-12.086988088103487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8606aafceab%3A0xfd6329f60a747ede!2sAv.%20Ignacio%20Merino%202331%2C%20Lince%2015046!5e0!3m2!1ses-419!2spe!4v1701587182662!5m2!1ses-419!2spe" width="350" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <FooterFunction />
     </>
   )
 }
