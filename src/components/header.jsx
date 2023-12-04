@@ -15,6 +15,9 @@ export function HeaderFunction({
     setCountProducts,
     setTotal, }) {
     const [active, setActive] = useState(false);
+    const [direccion, setDireccion] = useState("");
+    const [mensajeConfirmacion, setMensajeConfirmacion] = useState("");
+
     const onDeleteProduct = product => {
         const results = allProducts.filter(
             item => item.id !== product.id
@@ -72,9 +75,6 @@ export function HeaderFunction({
                                                 <p className='text-lg'>
                                                     {product.titulo}
                                                 </p>
-                                                <span className='font-bold text-lg mr-5'>
-                                                    ${product.costo}
-                                                </span>
                                             </div>
                                             <MdCancel className="w-6 h-6 transition-colors hover:text-red-500 cursor-pointer" onClick={() => onDeleteProduct(product)} />
                                         </div>
@@ -86,6 +86,16 @@ export function HeaderFunction({
                                     <span className='text-lg font-black'>${total}</span>
                                 </div>
 
+                                <div className='flex justify-center items-center py-5 px-2 space-x-5'>
+                                    <h3 className='text-lg font-bold'>Dirección:</h3>
+                                    <input type="text" value={direccion} onChange={e => setDireccion(e.target.value)} className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" />
+                                </div>
+                                <div className='flex flex-col justify-center items-center py-5 px-2 space-x-5'>
+                                    <button className="text-lg font-bold" onClick={() => setMensajeConfirmacion("Su pedido está en camino")}>Confirmar Pedido</button>
+                                    {mensajeConfirmacion && (
+                                        <p>{mensajeConfirmacion}</p>
+                                    )}
+                                </div>
                                 <button className='w-full py-3.5 mt-2 rounded-b-lg font-bold text-sm transition-all duration-300 ease-in-out hover:bg-gray-700 hover:scale-105 hover:rounded-none' onClick={onCleanCart}>
                                     Vaciar Carrito
                                 </button>
