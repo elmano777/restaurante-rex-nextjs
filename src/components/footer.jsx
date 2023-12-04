@@ -15,7 +15,7 @@ export function FooterFunction() {
     return (
         <footer className="w-full h-auto bg-red-700 text-white">
             <div className="flex flex-col md:flex-row w-full h-auto">
-                <div className="flex flex-col w-1/4 h-auto m-12">
+                <div className="flex flex-col w-full md:w-1/4 h-auto m-12">
                     <div className="flex flex-grow items-center gap-2">
                         <BiDirections />
                         <p>Dirección</p>
@@ -42,7 +42,7 @@ export function FooterFunction() {
                         </a>
                     </div>
                 </div>
-                <div className="flex flex-col w-1/4 h-20 m-12">
+                <div className="flex flex-col w-full md:w-1/4 h-20 m-12">
                     <div className="flex flex-grow items-center gap-2">
                         <GrSchedules />
                         <p>Horarios</p>
@@ -52,7 +52,7 @@ export function FooterFunction() {
                         <p>De Lunes a Domingo de 11:00 am a 8:00 pm</p>
                     </div>
                 </div>
-                <div className="flex flex-col w-1/4 h-auto m-12">
+                <div className="flex flex-col w-full md:w-1/4 h-auto m-12">
                     <div className="flex flex-grow items-center gap-2">
                         <BiDirections />
                         <p>Contacto</p>
@@ -74,19 +74,19 @@ export function FooterFunction() {
                         <a href="mailto:reclamos@cevicheriarex.com">reclamos@cevicheriarex.com</a>
                     </div>
                 </div>
-                <address className="flex flex-col w-1/4 h-auto m-12">
-                    <div className="bg-white h-auto w-auto my-4 rounded-full">
-                        <Image src="/Images/rex-removebg-preview.png" alt="logo"
-                            width={300} height={300} />
-                    </div>
-                    <div className="flex flex-row h-auto">
-                        <FaCcVisa className="w-1/4 h-8" />
-                        <FaCcMastercard className="w-1/4 h-8" />
-                        <SiAmericanexpress className="w-1/4 h-8" />
-                        <FaCcDiscover className="w-1/4 h-8" />
-                    </div>
-                </address>
-            </div>
+                    <address className="flex flex-col w-1/4 h-auto m-12">
+                        <div className="bg-white h-auto w-auto my-4 rounded-full">
+                            <Image src="/Images/rex-removebg-preview.png" alt="logo"
+                                width={300} height={300}/>
+                        </div>
+                        <div className="flex flex-row h-auto">
+                            <FaCcVisa className="w-1/4 h-8" />
+                            <FaCcMastercard className="w-1/4 h-8" />
+                            <SiAmericanexpress className="w-1/4 h-8" />
+                            <FaCcDiscover className="w-1/4 h-8" />
+                        </div>
+                    </address>
+                </div>
             <div className="flex flex-col items-center justify-center w-full h-auto gap-4">
                 <div className="flex flex-row">
                     <a href="https://www.facebook.com/cevicheriamariapastor/">

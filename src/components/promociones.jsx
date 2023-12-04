@@ -27,7 +27,7 @@ export const PromocionesCards = ({
     };
     const filteredData = data.filter(product => productIds.includes(product.id));
     return (
-        <div className='grid grid-cols-3 gap-2 h-auto w-full p-2'>
+        <div className='grid md:grid-cols-3 grid-cols-1 gap-2 h-auto w-full p-2'>
             {filteredData.map(product => (
                 <div className='my-2 md:my-7 md:w-full rounded-xl w-full h-auto border border-solid border-black' key={product.id}>
                     <div className="">
