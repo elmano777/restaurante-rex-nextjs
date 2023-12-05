@@ -27,7 +27,6 @@ export default function GiftCardsPage() {
                 setTotal={setTotal}
                 countProducts={countProducts}
                 setCountProducts={setCountProducts}
-                productIds={[1, 2, 3]}
             />
             <FooterFunction />
         </>
