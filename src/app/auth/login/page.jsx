@@ -14,7 +14,6 @@ function LoginPage() {
     } = useForm();
     const router = useRouter()
     const [error, setError] = useState(null)
-
     const onSubmit = handleSubmit(async (data) => {
         console.log(data);
 
@@ -76,12 +75,15 @@ function LoginPage() {
                         Contraseña
                     </span>
                 )}
-                <button className="w-full bg-blue-500 text-white p-3 rounded-lg mt-2">
+                <button className="w-full bg-blue-500 text-white p-3 rounded-lg">
                     Login
                 </button>
-                <Link href="/auth/register" className="w-80 text-center bg-red-500 text-white p-3 rounded-lg my-4">
-                No tienes cuenta? Create una
-            </Link>
+                <Link href="/auth/register" className="w-80 text-center bg-red-500 text-white p-3 rounded-lg">
+                    No tienes cuenta? Create una
+                </Link>
+                <Link href="/" className="w-80 text-center bg-yellow-500 text-white p-3 rounded-lg mb-4">
+                    Regresar
+                </Link>
             </form>
         </div>
     );

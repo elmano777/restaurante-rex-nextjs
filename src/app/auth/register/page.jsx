@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form"
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function RegistroFunction() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -25,8 +26,8 @@ export default function RegistroFunction() {
         if (res.ok) {
             router.push("/auth/login")
         }
-        console.log(res)
-    })
+    }
+    )
     return (
         <div className="bg-blue-600 h-screen w-screen flex items-center justify-center">
             <form action="" onSubmit={onSubmit} className="h-auto w-auto flex justify-center items-center flex-col gap-6 bg-white px-24">
@@ -53,9 +54,12 @@ export default function RegistroFunction() {
                         {errors.email && (<span className="text-red-500 h-4 block">{errors.email.message}</span>)}
                     </div>
                 </div>
-                <button className="text-2xl mb-8 px-4 py-2 bg-black text-white rounded-xl">
+                <button className="text-2xl px-4 py-2 bg-black text-white rounded-xl">
                     Registrarse
                 </button>
+                <Link href="/auth/login" className="text-xl mb-4 px-4 py-2 bg-black text-white rounded-xl">
+                    Regresar al inicio de sesión
+                </Link>
             </form>
         </div>
     )
