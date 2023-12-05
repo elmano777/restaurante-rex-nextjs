@@ -6,7 +6,7 @@ const prisma = new PrismaClient()
 
 export async function getProducts() {
     const products = await prisma.Product.findMany({
-        take: 4,
+        take: 81,
     })
     return products
 }
