@@ -10,3 +10,10 @@ export async function getProducts() {
     })
     return products
 }
+
+export async function getRutas(){
+    const rutas = await prisma.Ruta.findMany({
+        take: 15,
+    });
+    return rutas
+}
