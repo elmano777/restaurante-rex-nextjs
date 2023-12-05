@@ -18,3 +18,12 @@ model datausers2 {
   createdat DateTime @default(now())
   updatedat DateTime @updatedAt
 }
+
+model Product {
+  id       Int     @id @default(autoincrement())
+  titulo   String
+  costo    Int
+  imagen   String
+  descripcion String
+  cantidad Int
+}
