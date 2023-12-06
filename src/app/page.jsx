@@ -24,7 +24,7 @@ export default function Home() {
         countProducts={countProducts}
         setCountProducts={setCountProducts} />
       <div className="relative w-full h-72 md:h-96">
-        <Image src="/Images/lugar-transformed.jpg" alt="Place" layout="fill" />
+        <Image src="/Images/casarex.png" alt="Place" layout="fill" />
       </div>
       <div
         className="flex flex-col items-center justify-center w-full bg-red-700 h-28 
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
         </div>
         <Image
-          src="/Images/lugar-transformed.jpg"
+          src="/Images/ceviche.jpg"
           alt="another"
           className="w-full md:w-1/2 h-auto p-12 rounded-lg"
           width={500} height={288}

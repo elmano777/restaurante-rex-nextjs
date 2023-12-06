@@ -38,11 +38,11 @@ export function HeaderFunction({
                 <Image src="/Images/rex-removebg-preview.png" alt="Place" width={160} height={160} />
             </Link>
             <nav className="grid grid-cols-2 h-auto justify-center items-center w-full gap-5 p-10 md:flex md:flex-row md:w-1/2">
-                <Link href="/" className={"bg-black p-3 rounded-lg text-white hover:text-green-500"}>Inicio</Link>
-                <Link href="/GiftCards" className="bg-black p-3 rounded-lg text-white hover:text-green-500">GiftCards</Link>
-                <Link href="/Promos" className="bg-black p-3 rounded-lg text-white hover:text-green-500">Promociones</Link>
-                <Link href="/Carta" className="bg-black p-3 rounded-lg text-white hover:text-green-500">Carta</Link>
-                <Link href="/Reparto" className="bg-black p-3 rounded-lg text-white hover:text-green-500">Reparto</Link>
+                <Link href="/" className={"p-3 rounded-lg text-black font-bold hover:text-green-400 hover:bg-zinc-100"}>Inicio</Link>
+                <Link href="/GiftCards" className="p-3 rounded-lg text-black font-bold hover:text-green-400 hover:bg-zinc-100">GiftCards</Link>
+                <Link href="/Promos" className="p-3 rounded-lg text-black font-bold hover:text-green-400 hover:bg-zinc-100">Promociones</Link>
+                <Link href="/Carta" className="p-3 rounded-lg text-black font-bold hover:text-green-400 hover:bg-zinc-100">Carta</Link>
+                <Link href="/Reparto" className="p-3 rounded-lg text-black font-bold hover:text-green-400 hover:bg-zinc-100">Reparto</Link>
             </nav>
             <div className="flex justify-center items-center h-auto w-full md:w-1/4 gap-12">
                 <div className='relative'>
